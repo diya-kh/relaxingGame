@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
 }
 
 html {
@@ -15,48 +16,12 @@ html {
 }
 
 .container {
+    padding: 30px;
     height: 100vh;
     display: grid;
     place-items: center;
     background-color: black;
     overflow: hidden;
-    z-index: 0;
-    /* Keep waves behind other content */
-
-}
-
-.wave {
-    position: absolute;
-    stroke: orange;
-    fill: none;
-    stroke-width: 1;
-    opacity: 0.9;
-    animation: moveWave linear infinite, changeBrightness infinite;
-    transform-origin: center;
-    z-index: -1;
-    /* Waves behind the button and to-do list */
-}
-
-@keyframes moveWave {
-    0% {
-        transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotation-angle, 0deg)) scale(var(--scale, 1));
-    }
-
-    100% {
-        transform: translate(var(--end-x), var(--end-y)) rotate(var(--rotation-angle, 0deg)) scale(var(--scale, 1));
-    }
-}
-
-@keyframes changeBrightness {
-
-    0%,
-    100% {
-        filter: brightness(0.7);
-    }
-
-    50% {
-        filter: brightness(1.5);
-    }
 }
 
 .puzzle-wrapper {
@@ -64,7 +29,7 @@ html {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .cells,
@@ -189,8 +154,8 @@ html {
     row-gap: 1rem;
     width: 40rem;
     aspect-ratio: 1;
-    background-color: #ccccf1;
-    color: #333;
+    background-color: black;
+    color: rgb(112, 129, 181);
     border-radius: 1rem;
 }
 
@@ -220,7 +185,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #9898ec;
+    background-color: black;
     display: grid;
     place-items: center;
     opacity: 0;
